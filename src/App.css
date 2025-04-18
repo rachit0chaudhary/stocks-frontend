@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+/* Reset default browser styles */
+@tailwind base;
+
+/* Define component-specific styles */
+@tailwind components;
+
+/* Leverage utility classes for rapid styling */
+@tailwind utilities;
+
+/* Add custom styles for a refined user experience */
+/* Add custom styles for a refined user experience */
+.blink-green {
+    animation: blink-green 1s infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blink-red {
+    animation: blink-red 1s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes blink-green {
+
+    0%,
+    100% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: rgba(76, 175, 80, 0.5);
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@keyframes blink-red {
 
-.App-link {
-  color: #61dafb;
-}
+    0%,
+    100% {
+        background-color: transparent;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    50% {
+        background-color: rgba(244, 67, 54, 0.5);
+    }
 }

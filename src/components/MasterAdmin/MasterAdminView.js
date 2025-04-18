@@ -31,7 +31,7 @@ const ClientDetails = () => {
       const config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: `http://localhost:5000/api/var/masterAdmin/getClient/${id}`,
+        url: `http://13.201.80.200:5000/api/var/masterAdmin/getClient/${id}`,
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ const ClientDetails = () => {
       const config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: `http://localhost:5000/api/var/client/trades/client/brokerage/${id}`,
+        url: `http://13.201.80.200:5000/api/var/client/trades/client/brokerage/${id}`,
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -90,7 +90,7 @@ const ClientDetails = () => {
             const lotConfig = {
               method: "get",
               maxBodyLength: Infinity,
-              url: `http://localhost:5000/api/var/client/stocks/${trade.instrumentIdentifier}`,
+              url: `http://13.201.80.200:5000/api/var/client/stocks/${trade.instrumentIdentifier}`,
               headers: {
                 Authorization: `Bearer ${token}`,
               },

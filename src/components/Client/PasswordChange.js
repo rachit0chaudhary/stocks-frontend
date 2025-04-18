@@ -61,7 +61,7 @@ const PasswordChange = () => {
       }
 
       const response = await axios.put(
-        "http://localhost:5000/api/var/client/change-password",
+        "http://13.201.80.200:5000/api/var/client/change-password",
         {
           oldPassword,
           newPassword,

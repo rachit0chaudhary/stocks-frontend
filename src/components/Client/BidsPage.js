@@ -34,7 +34,7 @@ const Bids = () => {
 
         // Fetch bids
         const bidsResponse = await axios.get(
-          `http://localhost:5000/api/var/client/bids/${decodedToken.id}`,
+          `http://13.201.80.200:5000/api/var/client/bids/${decodedToken.id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -47,7 +47,7 @@ const Bids = () => {
           (bid) => bid.instrumentIdentifier
         );
         const stockPromises = instrumentIdentifiers.map((id) =>
-          axios.get(`http://localhost:5000/api/var/client/stocks/${id}`, {
+          axios.get(`http://13.201.80.200:5000/api/var/client/stocks/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           })
         );
@@ -78,7 +78,7 @@ const Bids = () => {
   const confirmDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/var/client/bids/${selectedBid._id}`,
+        `http://13.201.80.200:5000/api/var/client/bids/${selectedBid._id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("StocksUsertoken")}`,
@@ -109,7 +109,7 @@ const Bids = () => {
   const updateBid = async (updatedBid) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/var/client/bids/${selectedBid._id}`,
+        `http://13.201.80.200:5000/api/var/client/bids/${selectedBid._id}`,
         updatedBid,
         {
           headers: {

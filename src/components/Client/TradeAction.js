@@ -67,7 +67,7 @@ const InstrumentDetails = () => {
     const blockedStocksConfig = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:5000/api/var/Wishlist/blockstocks",
+      url: "http://13.201.80.200:5000/api/var/Wishlist/blockstocks",
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -121,7 +121,7 @@ const InstrumentDetails = () => {
       try {
         // Fetch instrument data
         const instrumentResponse = await axios.get(
-          `http://localhost:5000/api/var/client/instrument/${instrumentIdentifier}/trades/?userId=${userId}`,
+          `http://13.201.80.200:5000/api/var/client/instrument/${instrumentIdentifier}/trades/?userId=${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -152,7 +152,7 @@ const InstrumentDetails = () => {
 
       try {
         const stockResponse = await axios.get(
-          `http://localhost:5000/api/var/client/stocks/${instrumentIdentifier}`,
+          `http://13.201.80.200:5000/api/var/client/stocks/${instrumentIdentifier}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -179,7 +179,7 @@ const InstrumentDetails = () => {
 
       try {
         const tradingHoursResponse = await axios.get(
-          `http://localhost:5000/api/var/trading-hours/${exchange}`,
+          `http://13.201.80.200:5000/api/var/trading-hours/${exchange}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -342,7 +342,7 @@ const InstrumentDetails = () => {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/var/client/trades", data, {
+      await axios.post("http://13.201.80.200:5000/api/var/client/trades", data, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",

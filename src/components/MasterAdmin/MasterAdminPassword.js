@@ -32,7 +32,7 @@ const ChangePassword = () => {
       const config = {
         method: "put",
         maxBodyLength: Infinity,
-        url: `http://localhost:5000/api/var/masterAdmin/change-password/${masterAdminId}`,
+        url: `http://13.201.80.200:5000/api/var/masterAdmin/change-password/${masterAdminId}`,
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

@@ -48,7 +48,7 @@ const StopLossScreen = () => {
 
         // Fetch stock data
         const stockResponse = await axios.get(
-          `http://localhost:5000/api/var/client/stocks/${instrumentId}`,
+          `http://13.201.80.200:5000/api/var/client/stocks/${instrumentId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ const StopLossScreen = () => {
         // Fetch trading hours based on exchange
         const exchange = stockResponse.data.Exchange;
         const tradingHoursResponse = await axios.get(
-          `http://localhost:5000/api/var/trading-hours/${exchange}`,
+          `http://13.201.80.200:5000/api/var/trading-hours/${exchange}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -357,7 +357,7 @@ const BuySellPage = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/var/client/add/stoploss",
+        "http://13.201.80.200:5000/api/var/client/add/stoploss",
         {
           userId: userId,
           instrumentIdentifier: instrumentId,

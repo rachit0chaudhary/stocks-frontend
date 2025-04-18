@@ -20,7 +20,7 @@ const WeeklyPnLPage = () => {
       const config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: `http://localhost:5000/api/var/pnl/master-admin/${masterAdminId}/weekly-pnl`,
+        url: `http://13.201.80.200:5000/api/var/pnl/master-admin/${masterAdminId}/weekly-pnl`,
         headers: {
           Authorization: `Bearer ${token}`,
         },

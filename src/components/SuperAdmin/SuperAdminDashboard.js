@@ -102,7 +102,7 @@ const SuperAdminDashboard = () => {
 
         // Fetch Super Admin Data
         const responseSuperAdmin = await fetch(
-          "http://localhost:5000/api/var/superAdmin/getSuperAdmin",
+          "http://13.201.80.200:5000/api/var/superAdmin/getSuperAdmin",
           { headers: myHeaders }
         );
         const dataSuperAdmin = await responseSuperAdmin.json();
@@ -112,7 +112,7 @@ const SuperAdminDashboard = () => {
 
         // Fetch Client Data
         const responseClients = await fetch(
-          "http://localhost:5000/api/var/superAdmin/getAllClients",
+          "http://13.201.80.200:5000/api/var/superAdmin/getAllClients",
           { headers: myHeaders }
         );
         const dataClients = await responseClients.json();
@@ -178,7 +178,7 @@ const SuperAdminDashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/var/superAdmin/delete-masterAdmin/${adminId}`,
+        `http://13.201.80.200:5000/api/var/superAdmin/delete-masterAdmin/${adminId}`,
         requestOptions
       );
       if (!response.ok) {
@@ -227,7 +227,7 @@ const SuperAdminDashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/var/superAdmin/update-masterAdmin/${selectedAdmin._id}`,
+        `http://13.201.80.200:5000/api/var/superAdmin/update-masterAdmin/${selectedAdmin._id}`,
         requestOptions
       );
       const result = await response.json();

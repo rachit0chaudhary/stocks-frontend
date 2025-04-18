@@ -50,7 +50,7 @@ const TradeScreen = () => {
 
         // Fetch stock data
         const stockResponse = await axios.get(
-          `http://localhost:5000/api/var/client/stocks/${instrumentId}`,
+          `http://13.201.80.200:5000/api/var/client/stocks/${instrumentId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ const TradeScreen = () => {
         // Fetch trading hours based on exchange
         const exchange = stockResponse.data.Exchange;
         const tradingHoursResponse = await axios.get(
-          `http://localhost:5000/api/var/trading-hours/${exchange}`,
+          `http://13.201.80.200:5000/api/var/trading-hours/${exchange}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -318,7 +318,7 @@ const BuySellPage = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/var/client/trades",
+        "http://13.201.80.200:5000/api/var/client/trades",
         data,
         {
           headers: {

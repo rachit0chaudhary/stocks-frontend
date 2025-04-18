@@ -95,7 +95,7 @@ const MasterAdminDashboard = () => {
         const masterAdminId = decodedToken.id;
 
         const response = await axios.get(
-          `http://localhost:5000/api/var/masterAdmin/masteradmin/${masterAdminId}`,
+          `http://13.201.80.200:5000/api/var/masterAdmin/masteradmin/${masterAdminId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -127,7 +127,7 @@ const MasterAdminDashboard = () => {
         const masterAdminId = decodedToken.id;
 
         const response = await fetch(
-          `http://localhost:5000/api/var/masterAdmin/clients/${masterAdminId}`,
+          `http://13.201.80.200:5000/api/var/masterAdmin/clients/${masterAdminId}`,
           {
             method: "GET",
             headers: {
@@ -204,7 +204,7 @@ const MasterAdminDashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/var/masterAdmin/update-client/${selectedClient._id}`,
+        `http://13.201.80.200:5000/api/var/masterAdmin/update-client/${selectedClient._id}`,
         {
           method: "PUT",
           headers: {
@@ -243,7 +243,7 @@ const MasterAdminDashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/var/masterAdmin/delete-client/${selectedClient._id}`,
+        `http://13.201.80.200:5000/api/var/masterAdmin/delete-client/${selectedClient._id}`,
         {
           method: "DELETE",
           headers: {

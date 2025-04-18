@@ -21,7 +21,7 @@ const MasterAdminDetails = () => {
 
         // Fetch data using the masterAdmin ID
         const response = await axios.get(
-          `http://localhost:5000/api/var/masterAdmin/masteradmin/${masterAdminId}`,
+          `http://13.201.80.200:5000/api/var/masterAdmin/masteradmin/${masterAdminId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

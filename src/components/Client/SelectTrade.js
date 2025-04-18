@@ -47,7 +47,7 @@ const StockSelector = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/var/client/wishlist/${userId}`,
+          `http://13.201.80.200:5000/api/var/client/wishlist/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem(
@@ -75,7 +75,7 @@ const StockSelector = () => {
         setLoading(true);
         try {
           const response = await axios.get(
-            `http://localhost:5000/api/var/client/stocks/${selectedInstrument}`,
+            `http://13.201.80.200:5000/api/var/client/stocks/${selectedInstrument}`,
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem(

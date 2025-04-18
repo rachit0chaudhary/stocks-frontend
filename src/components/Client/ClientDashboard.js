@@ -184,7 +184,7 @@ const ClientDashboard = () => {
       }
 
       const wishlistResponse = await axios.get(
-        `http://localhost:5000/api/var/client/wishlist/${userId}`,
+        `http://13.201.80.200:5000/api/var/client/wishlist/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -203,7 +203,7 @@ const ClientDashboard = () => {
 
       const stockPromises = wishlistResponse.data.items.map((item) =>
         axios.get(
-          `http://localhost:5000/api/var/client/stocks/${item.instrumentIdentifier}`,
+          `http://13.201.80.200:5000/api/var/client/stocks/${item.instrumentIdentifier}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

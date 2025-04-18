@@ -25,7 +25,7 @@ const StockSearch = () => {
     if (searchTerm.trim()) {
       setLoading(true);
       axios
-        .get("http://localhost:5000/api/var/client/stocks/search", {
+        .get("http://13.201.80.200:5000/api/var/client/stocks/search", {
           params: { name: searchTerm },
           headers: {
             Authorization: `Bearer ${localStorage.getItem("****xxx*****")}`,

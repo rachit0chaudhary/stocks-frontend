@@ -14,7 +14,7 @@ const MasterAdminsTableCard = () => {
       try {
         const token = localStorage.getItem("superAdminToken");
         const response = await axios.get(
-          "http://localhost:5000/api/var/superAdmin/getAllMasterAdmin",
+          "http://13.201.80.200:5000/api/var/superAdmin/getAllMasterAdmin",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -31,7 +31,7 @@ function SuperAdminLogin() {
 
     try {
       const response = await fetch(
-        "http://13.201.80.200:5000/api/var/superAdmin/superAdminLogin",
+        "http://65.0.127.149:5000/api/var/superAdmin/superAdminLogin",
         requestOptions
       );
       const result = await response.json();

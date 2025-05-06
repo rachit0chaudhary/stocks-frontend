@@ -22,7 +22,7 @@ const TradingHoursPage = () => {
   const fetchTradingHours = async () => {
     try {
       const response = await axios.get(
-        "http://13.201.80.200:5000/api/var/trading-hours"
+        "http://65.0.127.149:5000/api/var/trading-hours"
       );
       setTradingHours(response.data);
     } catch (error) {
@@ -52,7 +52,10 @@ const TradingHoursPage = () => {
 
   const addTradingHours = async () => {
     try {
-      await axios.post("http://13.201.80.200:5000/api/var/trading-hours", formData);
+      await axios.post(
+        "http://65.0.127.149:5000/api/var/trading-hours",
+        formData
+      );
       fetchTradingHours();
       resetForm();
       toast.success("Trading hours added successfully!");
@@ -65,7 +68,7 @@ const TradingHoursPage = () => {
   const updateTradingHours = async () => {
     try {
       await axios.put(
-        `http://13.201.80.200:5000/api/var/trading-hours/${editing.exchange}`,
+        `http://65.0.127.149:5000/api/var/trading-hours/${editing.exchange}`,
         formData
       );
       fetchTradingHours();
@@ -86,7 +89,7 @@ const TradingHoursPage = () => {
     ) {
       try {
         await axios.delete(
-          `http://13.201.80.200:5000/api/var/trading-hours/${exchange}`
+          `http://65.0.127.149:5000/api/var/trading-hours/${exchange}`
         );
         fetchTradingHours();
         toast.success("Trading hours deleted successfully!");

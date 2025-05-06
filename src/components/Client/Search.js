@@ -33,7 +33,7 @@ const StockSearch = () => {
     const fetchBlockedStocks = async () => {
       try {
         const response = await axios.get(
-          "http://13.201.80.200:5000/api/var/Wishlist/blockstocks"
+          "http://65.0.127.149:5000/api/var/Wishlist/blockstocks"
         );
         setBlockedStocks(response.data.map((stock) => stock.symbol));
       } catch (error) {
@@ -63,7 +63,7 @@ const StockSearch = () => {
         }
 
         const wishlistResponse = await axios.get(
-          `http://13.201.80.200:5000/api/var/client/wishlist/${userId}`,
+          `http://65.0.127.149:5000/api/var/client/wishlist/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -90,7 +90,7 @@ const StockSearch = () => {
     if (searchTerm.trim()) {
       setLoading(true);
       axios
-        .get("http://13.201.80.200:5000/api/var/client/stocks/search", {
+        .get("http://65.0.127.149:5000/api/var/client/stocks/search", {
           params: { name: searchTerm },
           headers: {
             Authorization: `Bearer ${localStorage.getItem("StocksUsertoken")}`,
@@ -128,7 +128,7 @@ const StockSearch = () => {
 
     try {
       const response = await axios.post(
-        "http://13.201.80.200:5000/api/var/client/wishlist/add",
+        "http://65.0.127.149:5000/api/var/client/wishlist/add",
         {
           userId,
           item: {
@@ -169,7 +169,7 @@ const StockSearch = () => {
 
     axios
       .delete(
-        `http://13.201.80.200:5000/api/var/client/wishlist/remove/${userId}/${itemId}`,
+        `http://65.0.127.149:5000/api/var/client/wishlist/remove/${userId}/${itemId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

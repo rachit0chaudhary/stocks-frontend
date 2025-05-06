@@ -19,7 +19,7 @@ const UpdatePage = () => {
         const token = localStorage.getItem("masterAdminToken");
 
         const response = await axios.get(
-          `http://13.201.80.200:5000/api/var/masterAdmin/getClient/${id}`,
+          `http://65.0.127.149:5000/api/var/masterAdmin/getClient/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ const UpdatePage = () => {
       const token = localStorage.getItem("masterAdminToken");
 
       const response = await axios.put(
-        `http://13.201.80.200:5000/api/var/masterAdmin/update-client/${id}`,
+        `http://65.0.127.149:5000/api/var/masterAdmin/update-client/${id}`,
         {
           client_code: client.client_code, // Use the client_code from the state
           mcx_brokerage_type: client.mcx_brokerage_type,
@@ -116,7 +116,7 @@ const UpdatePage = () => {
       }
 
       const response = await axios.put(
-        `http://13.201.80.200:5000/api/var/masterAdmin/update-client/${id}`,
+        `http://65.0.127.149:5000/api/var/masterAdmin/update-client/${id}`,
         {
           availableBudget: updatedavailableBudget,
           budget: updatedavailableBudget,
@@ -164,7 +164,7 @@ const UpdatePage = () => {
       const token = localStorage.getItem("masterAdminToken");
 
       const response = await axios.put(
-        `http://13.201.80.200:5000/api/var/masterAdmin/update-client/${id}`,
+        `http://65.0.127.149:5000/api/var/masterAdmin/update-client/${id}`,
         {
           TotalMCXTrade: client.TotalMCXTrade,
           PerMCXTrade: client.PerMCXTrade,

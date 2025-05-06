@@ -19,7 +19,7 @@ function MasterAdminLogin() {
 
     try {
       const response = await axios.post(
-        "http://13.201.80.200:5000/api/var/masterAdmin/masterAdminLogin",
+        "http://65.0.127.149:5000/api/var/masterAdmin/masterAdminLogin",
         { username, password },
         {
           headers: {

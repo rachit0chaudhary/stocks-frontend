@@ -20,7 +20,7 @@ const NotificationList = () => {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(
-          "http://13.201.80.200:5000/api/var/Wishlist/notifications"
+          "http://65.0.127.149:5000/api/var/Wishlist/notifications"
         );
         setNotifications(response.data);
       } catch (error) {

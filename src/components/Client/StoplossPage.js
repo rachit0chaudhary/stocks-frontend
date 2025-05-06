@@ -34,7 +34,7 @@ const Stoploss = () => {
         setLoading(true);
 
         const stoplossResponse = await axios.get(
-          `http://13.201.80.200:5000/api/var/client/stoploss/${userId}`,
+          `http://65.0.127.149:5000/api/var/client/stoploss/${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -45,7 +45,7 @@ const Stoploss = () => {
           (stoploss) => stoploss.instrumentIdentifier
         );
         const stockPromises = instrumentIdentifiers.map((id) =>
-          axios.get(`http://13.201.80.200:5000/api/var/client/stocks/${id}`, {
+          axios.get(`http://65.0.127.149:5000/api/var/client/stocks/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           })
         );
@@ -84,7 +84,7 @@ const Stoploss = () => {
     try {
       const token = localStorage.getItem("StocksUsertoken");
       await axios.put(
-        `http://13.201.80.200:5000/api/var/client/stoploss/${selectedStoploss._id}`,
+        `http://65.0.127.149:5000/api/var/client/stoploss/${selectedStoploss._id}`,
         updatedStoploss,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -106,7 +106,7 @@ const Stoploss = () => {
     try {
       const token = localStorage.getItem("StocksUsertoken");
       await axios.delete(
-        `http://13.201.80.200:5000/api/var/client/stoploss/${selectedStoploss._id}`,
+        `http://65.0.127.149:5000/api/var/client/stoploss/${selectedStoploss._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

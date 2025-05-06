@@ -57,7 +57,7 @@ const MasterAdminView = () => {
     };
 
     fetch(
-      `http://13.201.80.200:5000/api/var/superAdmin/getMasterAdmin/${masterCode}`,
+      `http://65.0.127.149:5000/api/var/superAdmin/getMasterAdmin/${masterCode}`,
       requestOptions
     )
       .then((response) => {
@@ -139,7 +139,7 @@ const MasterAdminView = () => {
 
       try {
         await axios.put(
-          `http://13.201.80.200:5000/api/var/superAdmin/clients/${selectedClient._id}/status`,
+          `http://65.0.127.149:5000/api/var/superAdmin/clients/${selectedClient._id}/status`,
           data,
           {
             headers: {

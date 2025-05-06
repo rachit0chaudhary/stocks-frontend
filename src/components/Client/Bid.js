@@ -37,7 +37,7 @@ const BidScreen = () => {
 
         // Fetch stock data
         const stockResponse = await axios.get(
-          `http://13.201.80.200:5000/api/var/client/stocks/${instrumentId}`,
+          `http://65.0.127.149:5000/api/var/client/stocks/${instrumentId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ const BidScreen = () => {
         // Fetch trading hours based on exchange
         const exchange = stockResponse.data.Exchange;
         const tradingHoursResponse = await axios.get(
-          `http://13.201.80.200:5000/api/var/trading-hours/${exchange}`,
+          `http://65.0.127.149:5000/api/var/trading-hours/${exchange}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -304,7 +304,7 @@ const BuySellPage = ({
 
     try {
       const response = await axios.post(
-        "http://13.201.80.200:5000/api/var/client/add/bid",
+        "http://65.0.127.149:5000/api/var/client/add/bid",
         {
           userId: userId,
           instrumentIdentifier: instrumentId,

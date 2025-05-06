@@ -22,7 +22,7 @@ const StockForm = () => {
 
     try {
       const response = await axios.put(
-        "http://13.201.80.200:5000/api/var/superAdmin/stocks/update-close",
+        "http://65.0.127.149:5000/api/var/superAdmin/stocks/update-close",
         {
           instrumentIdentifier,
           closePrice: stockClose,

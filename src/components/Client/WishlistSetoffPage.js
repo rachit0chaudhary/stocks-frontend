@@ -41,7 +41,7 @@ const WishlistSetoffPage = () => {
         const config = {
           method: "get",
           maxBodyLength: Infinity,
-          url: `http://13.201.80.200:5000/api/var/Wishlist/wishlist/${userId}`,
+          url: `http://65.0.127.149:5000/api/var/Wishlist/wishlist/${userId}`,
           headers: {},
         };
 
@@ -81,7 +81,7 @@ const WishlistSetoffPage = () => {
 
     try {
       await axios.post(
-        `http://13.201.80.200:5000/api/var/Wishlist/wishlist/${userId}/reorder`,
+        `http://65.0.127.149:5000/api/var/Wishlist/wishlist/${userId}/reorder`,
         { newOrder }
       );
       // console.log('Wishlist order updated successfully');

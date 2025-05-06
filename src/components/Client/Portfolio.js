@@ -64,7 +64,7 @@ const StockPortfolio = () => {
         // console.log('User ID:', userId);
         if (userId) {
           const response = await axios.get(
-            `http://13.201.80.200:5000/api/var/client/trades/net-quantity/${userId}`,
+            `http://65.0.127.149:5000/api/var/client/trades/net-quantity/${userId}`,
             {
               headers: {
                 Authorization: `Bearer ${getToken()}`,
@@ -108,7 +108,7 @@ const StockPortfolio = () => {
     try {
       const token = getToken();
       const response = await axios.get(
-        `http://13.201.80.200:5000/api/var/client/stocks/${instrumentIdentifier}`,
+        `http://65.0.127.149:5000/api/var/client/stocks/${instrumentIdentifier}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -320,7 +320,7 @@ const StockPortfolio = () => {
         const config = {
           method: "patch",
           maxBodyLength: Infinity,
-          url: `http://13.201.80.200:5000/api/var/client/updateProfitLoss/${userId}`,
+          url: `http://65.0.127.149:5000/api/var/client/updateProfitLoss/${userId}`,
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

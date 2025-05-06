@@ -39,7 +39,7 @@ function TradeDetailPage() {
         }
 
         const response = await axios.get(
-          `http://13.201.80.200:5000/api/var/client/trades/details/${instrumentIdentifier}`,
+          `http://65.0.127.149:5000/api/var/client/trades/details/${instrumentIdentifier}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
